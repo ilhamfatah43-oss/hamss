@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ham Bakery</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<div class="music-player" onclick="toggleMusic()">
+  <div class="disc" id="disc"></div>
+</div>
+
+<audio id="music" loop>
+  <source src="c:\Users\lutfi\Downloads\WhatsApp Audio 2026-04-16 at 23.38.11.mp4" type="audio/mpeg">
+</audio>
+
+<!-- NAV -->
+<nav>
+  <h1>Ham Bakery</h1>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#produk">Produk</a></li>
+    <li><a href="#testimoni">Testimoni</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Baked With Love,<br>Served With Passion</h2>
+    <p>Roti fresh setiap hari dengan kualitas terbaik</p>
+
+    <div class="hero-btn">
+      <a href="https://wa.me/6289624655959?text=Halo%20saya%20mau%20order" target="_blank" class="btn">Order Sekarang</a>
+      <a href="#produk" class="btn secondary">Lihat Produk</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <h2>Kenapa Pilih Kami?</h2>
+  <div class="why-grid">
+    <div class="why-item">🍞 Fresh setiap hari</div>
+    <div class="why-item">🌿 Bahan premium</div>
+    <div class="why-item">❤️ Dibuat dengan cinta</div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <h2>Cerita Kami</h2>
+  <p>
+    Kadang hidup terasa capek ya.
+Tugas yang tidak ada habisnya, pikiran yang penuh, dan hari-hari yang terasa berjalan terlalu cepat tanpa sempat kita benar-benar berhenti sejenak.
+
+Di tengah semua itu, kita sering lupa bahwa kita juga butuh istirahat. Bukan istirahat yang besar atau jauh, tapi istirahat kecil yang sederhana—sekadar duduk tenang, menikmati sesuatu yang hangat, dan memberi ruang untuk diri sendiri bernapas lebih pelan.
+
+Dari situlah Ham Bakery hadir.
+  </p>
+</section>
+
+<!-- PRODUK -->
+<section id="produk" class="special">
+  <h2>Produk Kami</h2>
+
+  <div class="slider">
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec">
+      <h3>Roti Artisan</h3>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a">
+      <h3>Croissant</h3>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff">
+      <h3>Roti Gandum</h3>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187">
+      <h3>Cake</h3>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section id="testimoni" class="testimoni">
+  <h2>Apa Kata Pelanggan</h2>
+
+  <div class="testi-grid">
+    <div class="testi">"Rotinya enak banget!" - Andi</div>
+    <div class="testi">"Selalu fresh!" - Siti</div>
+    <div class="testi">"Croissant terbaik!" - Budi</div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="promo">
+  <h2>Promo Hari Ini 🔥</h2>
+  <p>Diskon 20% untuk pembelian pertama!</p>
+  <a href="https://wa.me/6289624655959?text=Order%20Promo" class="btn">Klaim Sekarang</a>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="contact">
+  <div class="contact-container">
+
+    <div class="contact-box">
+      <h2>Ham Bakery</h2>
+      <p>Roti fresh setiap hari dengan kualitas premium.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Kontak</h3>
+      <p>📍 Ambarawa</p>
+      <p>📞 089624655959</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Jam Buka</h3>
+      <p>08.00 - 20.00</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ham Bakery 🍞</p>
+</footer>
+
+<!-- CHATBOX (FIX POSISI) -->
+<div class="chatbox">
+  <div id="chat"></div>
+  <input type="text" id="input" placeholder="Tanya sesuatu...">
+  <button onclick="sendMessage()">Kirim</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

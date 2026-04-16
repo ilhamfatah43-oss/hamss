@@ -1,0 +1,347 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🍞 BACKGROUND TOKO ROTI */
+body {
+  background: linear-gradient(135deg, #f8f1e7, #f3e7d3, #efe0c7);
+}
+
+/* ===== GLOBAL ===== */
+section {
+  padding: 80px 10%;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+nav a, nav h1 {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1509440159596-0249088772ff') center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  position: relative;
+}
+
+/* overlay gelap biar tulisan kebaca */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+/* pastikan teks di atas overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* 🔥 ini bikin semua jarak rapi */
+  max-width: 600px;
+}
+
+.hero h2 {
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+/* tombol */
+.hero-btn {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* biar HP gak sempit */
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #d7a86e;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b8874f;
+}
+
+.secondary {
+  background: white;
+  color: black;
+}
+
+/* ===== WHY ===== */
+.why {
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.why-item {
+  background: #fff8f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ===== SLIDER PRODUK ===== */
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider .item {
+  min-width: 250px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background: #fff7ed;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.slider .item:hover {
+  transform: translateY(-5px);
+}
+
+.slider .item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ===== TESTIMONI ===== */
+.testimoni {
+  text-align: center;
+  background: linear-gradient(135deg, #f3e7d3, #f8f1e7);
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.testi {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimoni {
+  text-align: center;
+  background: linear-gradient(135deg, #f3e7d3, #f8f1e7);
+  padding: 100px 10%; /* 🔥 bikin ruang atas & bawah lebih lega */
+}
+
+.testimoni h2 {
+  margin-bottom: 40px; /* 🔥 jarak judul ke card */
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px; /* 🔥 jarak antar card */
+}
+
+.testi {
+  background: white;
+  padding: 25px; /* 🔥 lebih lega */
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  line-height: 1.6; /* 🔥 teks tidak rapat */
+}
+/* ===== PROMO ===== */
+.promo {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #3e2723, #5d4037);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* 🔥 ini penting biar tulisan tidak dempet */
+}
+
+.promo h2 {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.promo p {
+  font-size: 16px;
+  margin: 0;
+  max-width: 500px;
+  line-height: 1.6;
+}
+/* ===== CONTACT ===== */
+.contact {
+  background: #3e2723;
+  color: white;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 30px;
+}
+
+/* ===== CHATBOX ===== */
+.chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  background: #fff8f0;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+#chat {
+  height: 150px;
+  overflow-y: auto;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* ===== MUSIC PLAYER (FIX CLICK + Z INDEX) ===== */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: manipulation;
+}
+
+/* DISC */
+.disc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #222 30%, #000 60%, #111 100%);
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.disc::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #d7a86e;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 🔥 BERDETAK */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.beat {
+  animation: pulse 0.8s infinite ease-in-out;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #2b1a17;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== MOBILE FIX ===== */
+@media(max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+}
